@@ -32,9 +32,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">CodeTalker: Speech-Driven 3D Facial Animation with Discrete Motion Prior</h1>
+          <h1 class="title is-1 publication-title">CorrFormer</h1>
           <div class="is-size-5 publication-authors">
-            <h3 class="title is-3">CVPR 2023</h3>
+            <h4 class="title is-4">CVPR 2023</h4>
             <span class="author-block">
               <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
             <span class="author-block">
@@ -57,8 +57,8 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>South China University of Technology,</span>
+            <!--<span class="author-block"><sup>2</sup>Google Research</span>-->
           </div>
 
           <div class="column has-text-centered">
@@ -127,7 +127,10 @@
   </div>
 </section>
       <!-- Paper video.--> 
-  <center><video width="480" height="480" controls><source src="video.mp4" type="video/mp4"></video></center>
+  <center><video width="900" height="900" controls><source src="video.mp4" type="video/mp4"></video></center>
+  <h2 class="subtitle has-text-centered">
+    <strong>CorrFormer</strong> can synthesize vivid 3D facial animations (mesh sequences) given audio snippets.
+  </h2>
      <!--Paper video. -->
   
 <section class="section">
@@ -172,6 +175,42 @@
 </section>
 
 
+<section class="section" id="Method">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Method</h2>
+    <h3 class="title">Discrete Motion Prior Learning</h3>
+    <p>
+      CodeTalker first learns a discrete context-rich facial motion codebook 
+      by self-reconstruction learning over real facial motions.
+    </p>
+    <center><div><img src="1.png" ></center>
+    <h3 class="title">Speech-Driven Motion Synthesis</h3>
+    <p>
+      It then autoregressively synthesize facial motions through code query 
+      conditioned on both the speech signals and past motions.
+    </p>
+    <center><div><img src="2.png" ></center>
+  </div>
+  
+</section>
+
+<section class="section" id="Comparison">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Comparison</h2>
+    
+    <p>
+      Visual comparisons of sampled facial motions animated by different methods 
+      on VOCA (left) and BIWI (right) dataset. The upper partition shows the facial 
+      animation conditioned on different speech parts, while the lower depicts the 
+      temporal statistics (mean and standard deviation) of adjacent-frame motion 
+      variations within a sequence.
+    </p>
+    <center><div><img src="3.png" ></center>
+  </div>
+  
+</section>
+
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -186,30 +225,19 @@
 
 
 <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
             This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website source code based on the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> 
+            project page.
+
           </p>
         </div>
       </div>
