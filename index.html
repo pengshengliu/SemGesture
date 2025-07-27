@@ -32,38 +32,23 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">CorrFormer</h1>
-          <div class="is-size-5 publication-authors">
-            <h4 class="title is-4">CVPR 2023</h4>
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+          <h1 class="title is-1 publication-title">SemGesture: Synthesizing Semantically Enhanced and Coherent Gestures</h1>
+          <div class="is-size-5 publication-authors"> 
+            <h4 class="title is-4">ACMMM 2025</h4>
+            <span class="author-block">Pengsheng Liu<sup>1</sup>,</span>
+            <span class="author-block">Zhaojie Chu<sup>1</sup>,</span>
+            <span class="author-block">Xiaofen Xing<sup>1</sup>,</span>
+            <span class="author-block">Xiangmin Xu<sup>1</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>South China University of Technology,</span>
+            <span class="author-block"><sup>1</sup>South China University of Technology</span>
             <!--<span class="author-block"><sup>2</sup>Google Research</span>
           </div>
-
+          
+          <!--
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -82,7 +67,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -92,7 +76,6 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
@@ -102,7 +85,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -112,6 +94,7 @@
                   <span>Data</span>
                   </a>
             </div>
+            -->
 
           </div>
         </div>
@@ -127,11 +110,10 @@
   </div>
 </section>
       <!-- Paper video.--> 
-  <center><video width="900" height="900" controls><source src="video.mp4" type="video/mp4"></video></center>
+  <!-- <center><video width="900" height="900" controls><source src="video.mp4" type="video/mp4"></video></center>
   <h2 class="subtitle has-text-centered">
-    <strong>CorrFormer</strong> can synthesize vivid 3D facial animations (mesh sequences) given audio snippets.
-  </h2>
-     <!--Paper video. -->
+    <strong>CorrFormer</strong> can synthesize vivid 3D facial animations (mesh sequences) given audio snippets. -->
+
   
 <section class="section">
   <div class="container is-max-desktop">
@@ -141,31 +123,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Co-speech gestures are generally categorized into rhythmic and semantic gestures: rhythmic gestures align with speech rhythm and intonation, while semantic gestures convey specific meanings or emotions, enriching verbal communication. Most previous studies have focused on synthesizing rhythmic gestures, while recent methods have explored integrating large language models (LLMs) to retrieve semantic gestures and merge them with rhythmic ones. However, existing approaches primarily rely on textual context for retrieval, which may not fully capture the emotional and tonal nuances of speech, sometimes leading to semantic gestures that do not align with the speaker’s intended expression. Additionally, common gesture fusion techniques often merge rhythmic and semantic gestures directly, causing discontinuity due to differences in their movement styles. To address these challenges, we propose SemGesture, a system designed to generate smooth and semantically accurate gestures. Our approach incorporates Context-aware Retrieval powered by a Large Audio Language Model, enabling precise retrieval of gestures that align with both the semantic and emotional aspects of speech. Additionally, the Gesture Fusion Module dynamically adjusts semantic gestures to harmonize with rhythmic gestures, ensuring seamless and coherent motion transitions. Extensive experiments demonstrate that SemGesture significantly outperforms existing methods in generating contextually accurate and visually natural gestures.
           </p>
         </div>
       </div>
@@ -175,7 +133,7 @@
 </section>
 
 
-<section class="section" id="Method">
+<!-- <section class="section" id="Method">
   <div class="container is-max-desktop content">
     <h2 class="title">Method</h2>
     <h3 class="title">Discrete Motion Prior Learning</h3>
@@ -192,26 +150,13 @@
     <center><div><img src="2.png" ></center>
   </div>
   
-</section>
+</section> -->
 
-<section class="section" id="Comparison">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Comparison</h2>
-    
-    <p>
-      Visual comparisons of sampled facial motions animated by different methods 
-      on VOCA (left) and BIWI (right) dataset. The upper partition shows the facial 
-      animation conditioned on different speech parts, while the lower depicts the 
-      temporal statistics (mean and standard deviation) of adjacent-frame motion 
-      variations within a sequence.
-    </p>
-    <center><div><img src="3.png" ></center>
-  </div>
-  
+
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -221,7 +166,7 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
